@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Spectrum from './Spectrum';
 import UserInterface from './UserInterface';
+import AudioPlayer from './AudioPlayer';
 import logo from './logo.svg';
 import configuration from './configuration.json';
 import './App.css';
@@ -11,9 +12,11 @@ class App extends Component {
         super(props);
         this.state = {
             ['modes']: configuration,
-            ['active']: 'Bars'
+            ['active']: 'Bars',
+            ['audioFreqData']: null
         }
 
+        this.handleAudioFreqDataChange = this.handleAudioFreqDataChange.bind(this);
         this.handleDataChange = this.handleDataChange.bind(this);
         this.handleModeChange = this.handleModeChange.bind(this);
     }
@@ -21,10 +24,17 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Spectrum data={this.state} />
+                <AudioPlayer onAudioFreqDataChange={this.handleAudioFreqDataChange} data={this.state} />
                 <UserInterface onChange={this.handleDataChange} onModeChange={this.handleModeChange} data={this.state} />
+                <Spectrum data={this.state} />
             </div>
         );
+    }
+
+    handleAudioFreqDataChange(value) {
+        const data = this.state;
+        data.audioFreqData = value;
+        this.setState(data);
     }
 
     handleModeChange(value) {

@@ -2,41 +2,89 @@
 	"Bars": {
 		"color": {
 			"type": "color",
-			"value": "red",
+			"value": "#00FF00",
 			"label": "Color"
 		},
 		"bgColor": {
 			"type": "color",
-			"value": "black",
+			"value": "#000000",
 			"label": "Color"
 		},
 		"barsCount": {
 			"type": "range",
-			"value": "50",
-			"min": "0",
-			"max": "1000",
+			"value": 74,
+			"min": 1,
+			"max": 1000,
 			"label": "count of bars"
 		},
 		"barsWidth": {
 			"type": "range",
-			"value": "50",
-			"min": "0",
-			"max": "1000",
+			"value": 1,
+			"min": 0,
+			"max": 100,
 			"label": "width of bars"
 		},
 		"barsHeight": {
 			"type": "range",
-			"value": "50",
-			"min": "0",
-			"max": "1000",
+			"value": 8,
+			"min": 1,
+			"max": 50,
 			"label": "height of bars"
 		},
 		"barsSpace": {
 			"type": "range",
-			"value": "50",
-			"min": "0",
-			"max": "1000",
+			"value": 2,
+			"min": 1,
+			"max": 100,
 			"label": "space between bars"
+		},
+		"wireframe": {
+			"type": "checkbox",
+			"value": false,
+			"label": "wireframe"
+		},
+		"rotSpeedX": {
+			"type": "range",
+			"min": -100,
+			"max": 100,
+			"value": 0,
+			"label": "Rot. Speed X"
+		},
+
+		"rotSpeedY": {
+			"type": "range",
+			"min": -100,
+			"max": 100,
+			"value": 0,
+			"label": "Rot. Speed Y"
+		},
+		"rotSpeedZ": {
+			"type": "range",
+			"min": -100,
+			"max": 100,
+			"value": 0,
+			"label": "Rot. Speed Z"
+		},
+		"cameraX": {
+			"type": "range",
+			"min": -10000,
+			"max": 10000,
+			"value": 100,
+			"label": "Camera Pos. X"
+		},
+		"cameraY": {
+			"type": "range",
+			"min": -1000,
+			"max": 1000,
+			"value": 0,
+			"label": "Camera Pos. Y"
+		},
+		"cameraZ": {
+			"type": "range",
+			"min": -1000,
+			"max": 1000,
+			"value": 100,
+			"label": "Camera Pos. Z"
 		}
 	},
 	"BoomBox": {

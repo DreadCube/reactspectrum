@@ -5,10 +5,11 @@ class Spectrum extends Component {
 
     constructor(props) {
         super(props);
+
     }
 
     render() {
-        return <Bars data={this.props.data.modes['Bars']}></Bars>;
+        return <Bars audioFreqData={this.props.data.audioFreqData} data={this.props.data.modes['Bars']}></Bars>;
     }
 }
 
