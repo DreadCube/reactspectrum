@@ -1,0 +1,45 @@
+{
+	"Bars": {
+		"color": {
+			"type": "color",
+			"value": "red",
+			"label": "Color"
+		},
+		"bgColor": {
+			"type": "color",
+			"value": "black",
+			"label": "Color"
+		},
+		"barsCount": {
+			"type": "range",
+			"value": "50",
+			"min": "0",
+			"max": "1000",
+			"label": "count of bars"
+		},
+		"barsWidth": {
+			"type": "range",
+			"value": "50",
+			"min": "0",
+			"max": "1000",
+			"label": "width of bars"
+		},
+		"barsHeight": {
+			"type": "range",
+			"value": "50",
+			"min": "0",
+			"max": "1000",
+			"label": "height of bars"
+		},
+		"barsSpace": {
+			"type": "range",
+			"value": "50",
+			"min": "0",
+			"max": "1000",
+			"label": "space between bars"
+		}
+	},
+	"BoomBox": {
+
+	}
+}

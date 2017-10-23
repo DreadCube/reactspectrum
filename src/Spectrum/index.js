@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Bars from './Modes/Bars/';
 
 class Spectrum extends Component {
 
@@ -7,12 +8,7 @@ class Spectrum extends Component {
     }
 
     render() {
-
-        return (
-            <div>
-            	Spektrum:
-            </div>
-        );
+        return <Bars data={this.props.data.modes['Bars']}></Bars>;
     }
 }
 
