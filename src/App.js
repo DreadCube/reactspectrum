@@ -1,54 +1,28 @@
-import React, { Component } from 'react';
-import Spectrum from './Spectrum';
-import UserInterface from './UserInterface';
-import AudioPlayer from './AudioPlayer';
-import logo from './logo.svg';
-import configuration from './configuration.json';
-import './App.css';
+import React, { Component } from 'react'
+
+import './assets/react-toolbox/theme.css'
+import theme from './assets/react-toolbox/theme.js'
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider'
+
+import UI from './UI'
+
 
 class App extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = {
-            ['modes']: configuration,
-            ['active']: 'Bars',
-            ['audioFreqData']: null
-        }
-
-        this.handleAudioFreqDataChange = this.handleAudioFreqDataChange.bind(this);
-        this.handleDataChange = this.handleDataChange.bind(this);
-        this.handleModeChange = this.handleModeChange.bind(this);
+        super(props)
     }
 
     render() {
+    	const state = this.state
         return (
-            <div>
-                <AudioPlayer onAudioFreqDataChange={this.handleAudioFreqDataChange} data={this.state} />
-                <UserInterface onChange={this.handleDataChange} onModeChange={this.handleModeChange} data={this.state} />
-                <Spectrum data={this.state} />
-            </div>
+            <ThemeProvider theme={theme}>
+                <div className="App">
+                    <UI />
+                </div>
+            </ThemeProvider>
         );
-    }
-
-    handleAudioFreqDataChange(value) {
-        const data = this.state;
-        data.audioFreqData = value;
-        this.setState(data);
-    }
-
-    handleModeChange(value) {
-        const data = this.state;
-        data.active = value;
-        this.setState(data);
-    }
-
-    handleDataChange(id, value) {
-
-    	const data = this.state;
-    	data['modes'][data.active][id].value = value;
-    	this.setState(data);
     }
 }
 
-export default App;
+export default App

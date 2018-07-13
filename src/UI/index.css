@@ -1,0 +1,18 @@
+.drawer {
+	pointer-events: none;
+}
+
+.searchedTracks div[data-react-toolbox="avatar"] {
+	border-radius: 0%;
+	background-color: transparent;
+	width: 100px;
+}
+
+.searchedTracks div[data-react-toolbox="avatar"] img {
+	border-radius: 0%;
+}
+
+
+._1kTMH._3vAcK {
+	display: none;
+}
